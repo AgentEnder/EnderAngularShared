@@ -1,6 +1,6 @@
 import { Ng2tSlideDirective } from './slide.directive';
-import { async, TestBed, ComponentFixture } from '@angular/core/testing';
-import { Renderer2, Component, Type } from '@angular/core';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
 // Simple test component that will not in the actual app
 @Component({
@@ -55,7 +55,6 @@ describe('SlideDirective', () => {
     await timeout(Ng2tSlideDirective.DEFAULT_DURATION * 1.5 * 1000); // wait for animation to finish
 
     // Verify
-    console.log('IN HIDE: ', test.style.display);
     console.dir(checkCollapsed(test));
 
     expect(test.style.display === 'none').toBeTruthy();
@@ -71,7 +70,6 @@ describe('SlideDirective', () => {
 
     // Act
     showBtn.click();
-    console.log('IN SHOW: ', test.style.display);
     await timeout(Ng2tSlideDirective.DEFAULT_DURATION * 1.5 * 1000); // wait for animation to finish
 
     // Verify

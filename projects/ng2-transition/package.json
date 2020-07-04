@@ -1,6 +1,11 @@
 {
   "name": "ng2-transition",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "scripts": {
+    "test:transition": "ng test --project=ng2-transition --watch=false --browsers=ChromeHeadless",
+    "build:transition": "ng build --prod --project=ng2-transition && cp LICENSE.md ../../dist/ng2-transition/LICENSE.md",
+    "publish:transition": "npm run test:transition && npm run build:transition && cd ../../dist/ng2-transition && npm publish"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
