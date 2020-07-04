@@ -1,3 +1,20 @@
+# Ng2Transition
+
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+
+## Slide Transitions
+
+Using the directive `ng2tSlide` you can easily add sliding transitions to any html element. The main caveat currently is that this requires overflow: hidden.
+
+### Known Limitations:
+
+Any inline-styles for height, display, or transition will be removed by the directive. Avoid using these.
+
+An inline style for overflow-hidden will be added. This is necessary for the transition to work correctly.
+
+### Code Sample
+
+```html
 <button (click)="test.show()">Show</button>
 <button (click)="test.hide()">Hide</button>
 <button (click)="test.toggle()">Toggle</button>
@@ -11,3 +28,4 @@
     </div>
   </div>
 </div>
+```
